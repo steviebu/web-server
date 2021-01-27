@@ -15,8 +15,10 @@ const forecast = (lon, lat, callback) => {
             const description = current.weather_descriptions[0]
             const currentTemp = current.temperature
             const feelsLikeTemp = current.feelslike
+            const windSpeed = current.wind_speed
+            const windDir = current.wind_dir
             callback(undefined, 
-                description + ". It is currently " + currentTemp + " degrees out. It feels like " + feelsLikeTemp + " degrees out.")
+                description + ". It is currently " + currentTemp + " degrees out. It feels like " + feelsLikeTemp + " degrees out. Winds are " + windSpeed + " mph out of the " + windDir + ".")
         }
     })
 }
